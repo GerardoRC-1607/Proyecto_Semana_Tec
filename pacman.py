@@ -90,8 +90,8 @@ def valid(point):
 
 def world():
     """Draw world using path."""
-    bgcolor('black')
-    path.color('blue')
+    bgcolor('#0b0f1a')
+    path.color('#00e5ff')
 
     for index in range(len(tiles)):
         tile = tiles[index]
@@ -104,7 +104,7 @@ def world():
             if tile == 1:
                 path.up()
                 path.goto(x + 10, y + 10)
-                path.dot(2, 'white')
+                path.dot(2, '#b3ffff')
 
 
 def move():
@@ -128,7 +128,7 @@ def move():
 
     up()
     goto(pacman.x + 10, pacman.y + 10)
-    dot(20, 'yellow')
+    dot(20, '#ffd91a')
 
     for point, course in ghosts:
         if valid(point + course):
@@ -146,7 +146,7 @@ def move():
 
         up()
         goto(point.x + 10, point.y + 10)
-        dot(20, 'red')
+        dot(20, '#ff6bff')
 
     update()
 
